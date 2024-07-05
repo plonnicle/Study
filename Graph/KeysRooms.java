@@ -1,6 +1,6 @@
 //Summary: Given an array 'rooms' where 'rooms[i]' is the set of keys one can obtain to visit other rooms, return TRUE if you can visit all the rooms by going in order and false otherwise. Each INTEGER value in 'rooms[i]' represents a key that opens the corresponding room. All the rooms are locked except for 'rooms[0]'.
 //Approach: FOR each iterate through 'rooms', keeping a running counter of keys as an INTEGER key array. Starting at room 0, deposit the value(s) into the key array. Each room, check to see if the array has the value of the current room. If so, enter and repeat the process. Else, break out and return FALSE. IF at the end of the array and each room has been checked, return TRUE.
-//Solution:
+//Solution: BFS solution
 
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
