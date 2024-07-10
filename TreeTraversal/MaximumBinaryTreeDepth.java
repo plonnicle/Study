@@ -16,7 +16,7 @@
 
 //Summary: Given 'root' of a binary tree, return the maximum depth, the number of nodes along the longest path from teh root node to the farthest leaf node, as an int. 
 //Approach: Do a tree traversal (check left and right node and use recursion) then keep a running total of the maximum depth. Check the maximum depth number against the current depth number. If the current depth number is greater than the maximum, update it. RETURN the max depth.
-//Solution:
+//Solution: BFS
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null){
