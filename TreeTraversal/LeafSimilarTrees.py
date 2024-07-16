@@ -7,7 +7,7 @@
 
 #Summary: Given two head nodes 'root1' and 'root2', return true if their respective trees are 'leaf similar' AKA they have the same ending node values in the same sequence.
 #Approach: Do a tree traversal down to the nodes, and store their value in one of two temporary arrays. At the end, check if the two arrays have the same value. If so, return true, else false.
-#Solution [Structure - Algorithm]: Binary Tree - DFS
+#Solution [Structure - Algorithm]: Binary Tree - Depth-First Search
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         # Helper function to perform a depth-first search (DFS) to find all leaf values in order
