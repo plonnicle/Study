@@ -14,12 +14,37 @@ class Solution:
    #     return isMatch
     
     
+        """
+        :type pattern: str
+        :type s: str
+        :rtype: bool
+        """
+        tList, sList = list(pattern), s.split(" ")
+        n, m = len(tList), len(sList)
+        sMap, tMap = {}, {}
+        tCount, sCount = [], []
 
-        arr = s.split()
-        if len(arr) != len(pattern):
+        if n != m:
             return False
+
+        for i in range(n):
+            sString, tString = sList[i], tList[i]
+            if sString not in sMap:
+                sMap[sString] = [i]
+            else:
+                sMap[sString] += [i]
+
+            if tString not in tMap:
+                tMap[tString] = [i]
+            else:
+                tMap[tString] += [i]
+
+        def helper(currentMap):
+            ret = []
+            for key, value in currentMap.items():
+                ret.append(value)
+            ret.sort()
+            return ret
         
-        for i in range(len(arr)):
-            if pattern.find(pattern[i]) != arr.index(arr[i]):
-                return False
-        return True
+        tCount, sCount = helper(tMap), helper(sMap)
+        return tCount == sCount
