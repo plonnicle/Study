@@ -21,3 +21,10 @@ class Solution:
                     continue
         
         return finalArr
+    
+
+        #intersection_nums = set()
+        #for num in nums1:
+        #    if num in nums2:
+        #        intersection_nums.add(num)
+        #return intersection_nums
