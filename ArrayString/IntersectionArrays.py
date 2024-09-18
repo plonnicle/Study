@@ -1,5 +1,6 @@
 #Summary: From integer arrays nums1 and nums2, return the common elements between both in any order.
 #Approach: Iterate through nums1 and check to see if nums2 has any equal values (nested for loop). If so, add them to the final array. Return the final array.
+#Completion Time: 9 mins: 16 secs
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         mainArr = []
